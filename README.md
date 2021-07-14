@@ -1,46 +1,55 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# gortiQuiz: a quiz app for sports
 
-## Available Scripts
+## Description 
+This is a full-stack quiz application having all the core functionalities of a quiz application. It has five quizzes in different categories. Each quiz consists of five questions. 
+This is the fourth project out of five projects created by learning from [@neogcamp](https://neog.camp/) for [@roc8](https://www.roc8.careers/).
 
-In the project directory, you can run:
+Here's the link for the live demo:
+- [Live Demo](https://gortiquiz.netlify.app/)
 
-### `yarn start`
+## Preview 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![demo](/demo.gif)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Features
 
-### `yarn test`
+- Made with Typescript
+- Custom Quiz buttons with state management
+- Can modify the previous selection
+- Results displayed with Pie Charts
+- Search Results on the products page with real-time URL change
+- Sign up/login with validation check
+- Separate user management for user data
+- Responsiveness for Mobiles, Tablets, Desktop and HD Desktops
+- Made with Typescript and Chakra UI
+- Backend with Mongodb, Nodejs and Express
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack:
+### Front-End:
 
-### `yarn build`
+- Typescript
+- React 
+- Chakra UI
+- React Router
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Back-End:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node
+- Express
+- MongoDB + Mongoose
+- jwt Authentication 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contact
 
-### `yarn eject`
+- Github: [@themohammadsa](https://github.com/themohammadsa)
+- Twitter: [@themohammadsa](https://twitter.com/themohammadsa)
+- Instagram: [@themohammadsa](https://www.instagram.com/themohammadsa/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/themohammadsa/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Contributing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Contributions, issues, and feature requests are welcome!   
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Feel free to check the [issue](https://github.com/themohammadsa/gortiQuiz/issues/2) page.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
