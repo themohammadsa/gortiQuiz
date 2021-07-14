@@ -5,12 +5,15 @@
 This is a full-stack quiz application having all the core functionalities of a quiz application. It has five quizzes in different categories. Each quiz consists of five questions. 
 This is the fourth project out of five projects created by learning from [@neogcamp](https://neog.camp/) for [@roc8](https://www.roc8.careers/).
 
-Here's the link for the live demo:
-- [Live Demo](https://gortiquiz.netlify.app/)
-
 ## Preview 
 
 ![demo](/demo.gif)
+
+## Links
+
+- [Live Demo](https://gortiquiz.netlify.app/)
+- [Front-End Repo](https://github.com/themohammadsa/gortiQuiz/)
+- [Back-End Repo](https://github.com/themohammadsa/gortiQuiz-backend)
 
 ## Features
 
