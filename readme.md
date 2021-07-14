@@ -43,6 +43,25 @@ This is the fourth project out of five projects created by learning from [@neogc
 - MongoDB + Mongoose
 - jwt Authentication 
 
+
+
+## Getting Started
+### Dependencies
+You will need `node` and `npm` installed globally in your machine.
+
+### Installation
+1. Clone the repo  
+```git clone https://github.com/themohammadsa/gortiQuiz.git```
+2. Install the npm packages  
+```npm install```
+
+### Usage
+1. To start the server  
+```npm start```
+2. To visit the website, go to  
+```localhost:3000```
+
+
 ## Contact
 
 - Github: [@themohammadsa](https://github.com/themohammadsa)
