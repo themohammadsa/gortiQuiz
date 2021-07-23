@@ -17,7 +17,7 @@ export const PieChart = ({ stats }: statsPropType) => {
                 </Box>
 
                 <Box>
-                    <CircularProgress value={stats.score} color="green.400" thickness="12px" size="8rem" >
+                    <CircularProgress value={stats.score * 10} color="green.400" thickness="12px" size="8rem" >
                         <CircularProgressLabel fontSize="1.5rem" fontWeight="semibold">
                             {stats.score}/{stats.totalScore}
                         </CircularProgressLabel>
@@ -30,7 +30,7 @@ export const PieChart = ({ stats }: statsPropType) => {
 
             <HStack m="8" p="5" justify="center">
                 <Box>
-                    <CircularProgress value={stats.wrongAnswer} color="red.600" thickness="12px" size="5rem">
+                    <CircularProgress value={stats.wrongAnswer * 20} color="red.600" thickness="12px" size="5rem">
                         <CircularProgressLabel fontWeight="semibold">
                             {stats.wrongAnswer}
                         </CircularProgressLabel>
@@ -41,7 +41,7 @@ export const PieChart = ({ stats }: statsPropType) => {
                 </Box>
 
                 <Box pl="10" pr="10">
-                    <CircularProgress value={stats.attemptedQuestions} color="green.400" thickness="10px" size="5rem" >
+                    <CircularProgress value={stats.attemptedQuestions * 20} color="green.400" thickness="10px" size="5rem" >
                         <CircularProgressLabel fontWeight="semibold">
                             {stats.attemptedQuestions}/{stats.totalQuestions}
                         </CircularProgressLabel>
@@ -52,7 +52,7 @@ export const PieChart = ({ stats }: statsPropType) => {
                 </Box>
 
                 <Box>
-                    <CircularProgress value={stats.correctAnswer} color="green.400" thickness="12px" size="5rem">
+                    <CircularProgress value={stats.correctAnswer * 20} color="green.400" thickness="12px" size="5rem">
                         <CircularProgressLabel fontWeight="semibold">
                             {stats.correctAnswer}
                         </CircularProgressLabel>
