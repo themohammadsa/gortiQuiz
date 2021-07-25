@@ -82,7 +82,7 @@ export const Login = () => {
                 setError("Servor Error")
                 setThrottle(false)
             }
-        }
+        } else setThrottle(false)
     }
 
     useEffect(() => {

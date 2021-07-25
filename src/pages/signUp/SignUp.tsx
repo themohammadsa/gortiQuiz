@@ -19,6 +19,7 @@ export const SignUp = () => {
     const [name, setName] = useState<string>("");
     const [email, setEmail] = useState<string>("");
     const [error, setError] = useState<string>("");
+    const [throttle, setThrottle] = useState(false);
     const [loader, setLoader] = useState<boolean>(false)
     const navigate = useNavigate()
     const toast = useToast()
@@ -31,6 +32,7 @@ export const SignUp = () => {
 
     const clickHandler = async () => {
         setError('')
+        setThrottle(true);
         signUpValidation()
 
         const checkInput =
@@ -38,7 +40,6 @@ export const SignUp = () => {
 
         if (checkInput) {
             const data = await createUser({ name, email, password })
-            console.log(data)
             if (data.success) {
                 setLoader(true)
                 setTimeout(() => {
@@ -47,15 +48,17 @@ export const SignUp = () => {
                         status: "success",
                         isClosable: true,
                     })
+                    setThrottle(false)
                     navigate("/")
                 }, 1500)
             } else if (data.message === "409") {
                 setError("Email ID already exists")
+                setThrottle(false)
             } else {
                 setError("Servor error!")
+                setThrottle(false)
             }
-        }
-
+        } else setThrottle(false)
     }
 
     return (
@@ -100,9 +103,9 @@ export const SignUp = () => {
                             </Text>}
 
                         <Button colorScheme="orange" width="inherit" mb="3" mt="3"
-                            onClick={clickHandler}
+                            onClick={clickHandler} disabled={!throttle ? false : true}
                         >
-                            Create Account
+                            {!throttle ? ' Create Account ' : 'Loading...'}
                         </Button>
 
                         <Text>
