@@ -21,6 +21,7 @@ export const Login = () => {
     const [password, setPassword] = useState<string>("");
     const [email, setEmail] = useState<string>("");
     const [error, setError] = useState<string>("");
+    const [throttle, setThrottle] = useState(false);
     const [loader, setLoader] = useState<boolean>(false)
     const { setName, setToken, setEmail: setEmailContext } = useAuthContext()
 
@@ -40,6 +41,7 @@ export const Login = () => {
     const clickHandler = async () => {
         setError('')
         loginValidation()
+        setThrottle(true)
 
         const checkInput =
             email.length > 4 && password.length >= 2;
@@ -67,14 +69,18 @@ export const Login = () => {
                             email: email,
                         })}`
                     )
+                    setThrottle(false)
                     return navigate("/");
                 }, 1000)
             } else if (data.message === "409") {
                 setError("Password incorrect")
+                setThrottle(false)
             } else if (data.message === "403") {
                 setError("Email not found")
+                setThrottle(false)
             } else {
                 setError("Servor Error")
+                setThrottle(false)
             }
         }
     }
@@ -133,10 +139,10 @@ export const Login = () => {
                                 {error}
                             </Text>}
 
-                        <Button colorScheme="orange" width="inherit" mb="3" mt="3"
+                        <Button colorScheme="orange" width="inherit" mb="3" mt="3" disabled={!throttle ? false : true}
                             onClick={clickHandler}
                         >
-                            Log In
+                            {!throttle ? 'Log In' : 'Loading...'}
                         </Button>
 
                         <Box d="flex" alignItems="center">
