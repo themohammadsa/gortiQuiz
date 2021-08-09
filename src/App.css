@@ -1,0 +1,8 @@
+.App {
+  text-align: center;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
